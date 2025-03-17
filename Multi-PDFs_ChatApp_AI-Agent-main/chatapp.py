@@ -105,12 +105,11 @@ def main():
     st.header("Multi-PDF's 📚 - Chat Agent 🤖 ")
 
     # Sidebar for PDF upload
-    script_dir = os.path.dirname(__file__)
-    # Construct the full path to the image
-    image_path = os.path.join(script_dir, "img", "bot.jpg")
-    st.image(image_path)  # Load the image
-    st.write("---")
-        
+    with st.sidebar:
+        script_dir = os.path.dirname(__file__)
+        image_path = os.path.join(script_dir, "img", "bot.jpg")
+        st.image(image_path)  # Load the image
+        st.write("---")
         st.title("📁 PDF File's Section")
         pdf_docs = st.file_uploader("Upload your PDF Files & \n Click on the Submit & Process Button ", accept_multiple_files=True)
         if st.button("Submit & Process"):
@@ -119,12 +118,10 @@ def main():
                 text_chunks = get_text_chunks(raw_text)
                 get_vector_store(text_chunks)
                 st.success("Done")
-
         st.write("---")
 
     # Main chat area
     user_question = st.text_input("Ask a Question from the PDF Files uploaded .. ✍️📝")
-    
     if user_question:
         answer = user_input(user_question)
         st.write("Reply: ", answer)
