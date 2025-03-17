@@ -106,10 +106,10 @@ def main():
 
     # Sidebar for PDF upload
     script_dir = os.path.dirname(__file__)
-        # Construct the full path to the image
-        image_path = os.path.join(script_dir, "img", "bot.jpg")
-        st.image(image_path)  # Load the image
-        st.write("---")
+    # Construct the full path to the image
+    image_path = os.path.join(script_dir, "img", "bot.jpg")
+    st.image(image_path)  # Load the image
+    st.write("---")
         
         st.title("📁 PDF File's Section")
         pdf_docs = st.file_uploader("Upload your PDF Files & \n Click on the Submit & Process Button ", accept_multiple_files=True)
