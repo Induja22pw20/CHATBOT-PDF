@@ -105,8 +105,10 @@ def main():
     st.header("Multi-PDF's 📚 - Chat Agent 🤖 ")
 
     # Sidebar for PDF upload
-    with st.sidebar:
-        st.image("img/bot.jpg")
+    script_dir = os.path.dirname(__file__)
+        # Construct the full path to the image
+        image_path = os.path.join(script_dir, "img", "bot.jpg")
+        st.image(image_path)  # Load the image
         st.write("---")
         
         st.title("📁 PDF File's Section")
