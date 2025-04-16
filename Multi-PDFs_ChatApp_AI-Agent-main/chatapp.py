@@ -131,7 +131,7 @@ def main():
     st.markdown(
         """
         <div style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #B2BEB5; padding: 15px; text-align: center;">
-            PDF CHATBOT ❤️ [ DIV - KAV - HAR - IND]
+            PDF CHATBOT ❤️ [ ROSH - IND]
         </div>
         """,
         unsafe_allow_html=True
